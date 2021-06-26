@@ -1,0 +1,411 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block title %}TypingFever - Online Typing Competition platform{% endblock %}
+
+{% block body %}
+
+{% if messages %}
+{% for message in messages %}
+
+<div class="container">
+<div class="alert alert-success alert-dismissible fade show mt-2" role="alert">
+  <h5 class="text-center"> {{message}}</h5>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+</div>
+
+{% endfor %}
+{% endif %}
+
+<head>
+    <meta name="sitelock-site-verification" content="1265" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161463945-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-161463945-1');
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'contestapp/index/css/style.css' %}">
+  <!--Image Slider CSS-->
+  <!-- <link rel="stylesheet" type="text/css" href="https://fantasytyping.in/css/imageslid.css"> -->
+<script data-ad-client="ca-pub-1752109579112904" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script type="text/javascript" src="{% static 'contestapp/index/js/scripts.js' %}"></script>
+</head>
+
+
+<body>
+
+
+<div class="bd-example">
+          <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+              <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-interval="5000">
+                <img src="{% static 'contestapp/index/images/key2.jpg' %}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h6 style="color:#EC7063;" class="text-left">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <div class="wavy">
+                                  <span class="noselect" style="--i:1; color:#EC7063;">T</span>
+                                  <span class="noselect" style="--i:2; color:#EC7063;">y</span>
+                                  <span class="noselect" style="--i:3; color:#EC7063;">p</span>
+                                  <span class="noselect" style="--i:4; color:#EC7063;">i</span>
+                                  <span class="noselect" style="--i:5; color:#EC7063;">n</span>
+                                  <span class="noselect" style="--i:6; color:#EC7063;">g</span>
+                                  <span class="noselect" style="--i:7; color:#EC7063;">F</span>
+                                  <span class="noselect" style="--i:8; color:#EC7063;">e</span>
+                                  <span class="noselect" style="--i:9; color:#EC7063;">v</span>
+                                  <span class="noselect" style="--i:10; color:#EC7063;">e</span>
+                                  <span class="noselect" style="--i:11; color:#EC7063;">r</span>
+
+                                </div>
+                                </div>
+                                </div>
+
+                      </h6>
+
+
+                </div>
+              </div>
+              <div class="carousel-item" data-interval="5000">
+                <img src="{% static 'contestapp/index/images/key3.jpg' %}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h2 style="color:black;" class="text-center">
+
+                      <div class="wavy">
+                                  <span class="noselect" style="--i:1;">It</span>
+                                  <span class="noselect" style="--i:2;"> </span>
+                                  <span class="noselect" style="--i:3;">is</span>
+                                  <span class="noselect" style="--i:4;"> </span>
+                                  <span class="noselect" style="--i:5;">a</span>
+                                  <span class="noselect" style="--i:6;"> </span>
+                                  <span class="noselect" style="--i:7;">Typing</span>
+                                  <span class="noselect" style="--i:8;"> </span>
+                                  <span class="noselect" style="--i:9;">Contest</span>
+
+                                </div>
+
+                      </h2>
+
+                </div>
+              </div>
+              <div class="carousel-item" data-interval="5000">
+                <img src="{% static 'contestapp/index/images/keyboard1.jpg' %}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h2 style="color:#EC7063;" class="text-right">
+
+
+                      <div class="wavy">
+                                  <span class="noselect" style="--i:1;">Win</span>
+                                  <span class="noselect" style="--i:2;"> </span>
+                                  <span class="noselect" style="--i:3;">Lots of</span>
+                                  <span class="noselect" style="--i:4;"> </span>
+                                  <span class="noselect" style="--i:5;">Money</span>
+                                  <span class="noselect" style="--i:6;"> </span>
+                                  <span class="noselect" style="--i:7;">From</span>
+                                  <span class="noselect" style="--i:8;"> </span>
+                                  <span class="noselect" style="--i:9;">Here !!</span>
+
+
+                                </div>
+                      </h2>
+
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+
+
+
+
+<!--<div class="row">-->
+<!--            <div class="col-md-12">-->
+<!--                <div class="wavy">-->
+<!--                  <span class="noselect" style="&#45;&#45;i:1;">U</span>-->
+<!--                  <span class="noselect" style="&#45;&#45;i:2;">P</span>-->
+<!--                  <span class="noselect" style="&#45;&#45;i:3;">C</span>-->
+<!--                  <span class="noselect" style="&#45;&#45;i:4;">O</span>-->
+<!--                  <span class="noselect" style="&#45;&#45;i:5;">M</span>-->
+<!--                  <span class="noselect" style="&#45;&#45;i:6;">I</span>-->
+<!--                  <span class="noselect" style="&#45;&#45;i:7;">N</span>-->
+<!--                  <span class="noselect" style="&#45;&#45;i:8;">G</span>-->
+<!--                  <span class="noselect" style="&#45;&#45;i:9;"> </span>-->
+<!--                  <span class="noselect" style="&#45;&#45;i:10;">M</span>-->
+<!--                  <span class="noselect" style="&#45;&#45;i:11;">A</span>-->
+<!--                  <span class="noselect" style="&#45;&#45;i:12;">T</span>-->
+<!--                  <span class="noselect" style="&#45;&#45;i:13;">C</span>-->
+<!--                  <span class="noselect" style="&#45;&#45;i:14;">H</span>-->
+<!--                  <span class="noselect" style="&#45;&#45;i:15;">E</span>-->
+<!--                  <span class="noselect" style="&#45;&#45;i:16;">S</span>-->
+<!--                </div>-->
+<!--                &lt;!&ndash; <h3 class="upcoming-match-title">UPCOMING MATCHES</h3> &ndash;&gt;-->
+<!--            </div>-->
+<!--        </div>-->
+
+<h3 class="text-center" style="color:#EC7063;">
+
+    <ul class="list-group container mt-3">
+      <li class="list-group-item">Active Contest ({{all_contest_count}})</li>
+
+    </ul>
+</h3>
+
+<div class="container mb-5 mt-5">
+<div class="row container" id="contestGrid">
+
+
+
+        {% for i in all_contest %}
+    <div class="col-xm-6 col-md-6 col-lg-6 mb-3">
+        <div class="home-match-card4 px-4 pb-3 pt-3 bg-info">
+
+
+            <div class="row justify-content-center align-items-center">
+                <div class="col-sm-3 col-6 text-left order-sm-1"></div>
+
+                <div class="col-sm-6 text-center order-sm-2 order-12">
+                    <div class="DateCountdown" data-date="{{i.contest_date}} {{i.contest_time}}" data-timer="2646"></div>
+                </div>
+
+                <div class="col-sm-3 col-6 text-right order-sm-3"></div>
+            </div>
+
+            <div class="row home-prize">
+                <div class="col-12 text-left">
+                    <h6 class="text-capitalize contest-title">Contest Time : {{i.contest_date}}, {{i.contest_time}}</h6>
+                    <h7 class="text-capitalize contest-title">Total Prize : <i class="fas fa-rupee-sign"></i> {{i.price_money}}</h7>
+                    <form action="" method="post" class="join-contest">
+                        <input type="hidden" name="fees" value="Entry(31)">
+                        <button type="submit" class="btn btn-warning join" disabled> Entry ( <i class="fas fa-rupee-sign"></i> {{i.entry_money}})</button>
+                    </form>
+                </div>
+            </div>
+
+
+<!--            <div class="progress mt-3" style="height:8px">-->
+<!--                <div class="progress-bar bg-gold" style="width:100%"></div>-->
+<!--            </div>-->
+<!--            <div class="row">-->
+<!--                <div class="col-6 text-left text-gold">-->
+<!--                    <p>0 spot left</p>-->
+<!--                </div>-->
+<!--                <div class="col-6 text-right	text-muted text-muted home-prize">-->
+<!--                    <p>20 spots</p>-->
+<!--                </div>-->
+<!--            </div>-->
+        </div>
+        </div>
+        {% endfor %}
+
+        </div>
+
+</div>
+
+
+
+
+<section class="ftco-section ftco-counter info-section bg-danger">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-4 d-flex justify-content-center counter-wrap ftco-animate fadeInUp ftco-animated">
+              <div class="block-18 text-center">
+                <div class="text">
+                  <div class="icon">
+<!--                    <i class="fas fa-keyboard"></i>-->
+                  </div>
+                  <strong class="number text-danger">1157</strong>
+                  <span class="text-danger">Total Contest</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center counter-wrap ftco-animate fadeInUp ftco-animated">
+              <div class="block-18 text-center">
+                <div class="text">
+                  <div class="icon">
+<!--                    <i class="fas fa-satellite"></i>-->
+                  </div>
+                  <strong class="number text-danger">{{all_contest_count}}</strong>
+                  <span class="text-danger">Running Contest</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center counter-wrap ftco-animate fadeInUp ftco-animated">
+              <div class="block-18 text-center">
+                <div class="text">
+                  <div class="icon">
+<!--                    <i class="fas fa-users"></i>-->
+                  </div>
+                  <strong class="number text-danger">27887</strong>
+                  <span class="text-danger">Total Users</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ftco-section ftco-counter testimonials bg-container">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <h3 class="upcoming-match-title">ABOUT US</h3>
+          <div class="embed-responsive embed-responsive-4by3">
+            <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/Kh6KF6fJKrE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center mt-5">
+        <div class="col-md-8">
+          <h3 class="upcoming-match-title">How To Use?</h3>
+          <p class="text-light">Welcome, To join our live typing compition simply sign up with us and follow the instruction, after succesfully signup, in your account you will see live ongoing compition  simply deposit the desire amount and
+          start showcaing your tpying speed so you can earn money while sitting in your home.</p>
+          <div class="embed-responsive embed-responsive-4by3">
+            <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/qWzwzIikK7o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+<div class="modal" tabindex="-1" role="dialog" id="wrong-time">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Wrong Date/Time on your system</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="alert alert-danger" role="alert">We encountered that your System <strong>Date/Time</strong> is <strong>incorrect</strong> according <strong>IST</strong>.</p>
+                <p class="alert alert-info mt-5" role="alert">Please update your system <strong>Date/Time</strong> with <strong>IST</strong>.</p>
+                <p class="alert alert-info" role="alert">Else you will not able to proceed further.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal" tabindex="-1" role="dialog" id="time-changed">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">System time has changed</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="alert alert-danger" role="alert">We encountered that you have changed your system time and that is against our rules.</p>
+                <p class="alert alert-danger" role="alert">Please don't do it again. Otherwise your account get <strong>Temporarily/Permanently</strong> blocked.</p>
+                <p class="alert alert-info mt-5" role="alert">Please update your system <strong>Date/Time</strong> with <strong>IST</strong>.</p>
+                <p class="alert alert-info" role="alert">Else you will not able to proceed further.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script src="{% static 'contestapp/index/js/serverTime.js' %}"></script>
+  <script src="{% static 'contestapp/index/assets/dist/js/time.js' %}"></script>
+  <script src="{% static 'contestapp/index/assets/dist/js/ajax-call.js' %}"></script>
+  <script>
+        setTimer();
+        function setTimer(){
+            $(".DateCountdown").TimeCircles({
+                count_past_zero: false,
+                use_background: false,
+                circle_bg_color: "#000000",
+                time: {
+                    Days: { color: "#ffffff" },
+                    Hours: { color: "#ffffff" },
+                    Minutes: { color: "#ffffff" },
+                    Seconds: { color: "#ffffff" }
+                }
+            }).addListener(countdownComplete);         // add "countdown complete listener"
+        };
+        function countdownComplete(unit, value, total){
+            if(total == 0){
+                fetchRecords();
+            }
+        };
+       function fetchRecords(){
+            var currentUrl      = window.location.href;
+            $.ajax({
+                url: currentUrl,
+                 success: function(result){
+                    $(".ajaxRender").html(result);
+                    setTimer();
+                  }
+            });
+        }
+    </script>
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5ecb6da7c75cbf1769ef0767/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+</body>
+{% endblock %}

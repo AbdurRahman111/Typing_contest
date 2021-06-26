@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Log In - Fantasy Typing</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf-token" content="xf4AMP1donsMQiAjgINk90GTqLFeZJ7FPUqqK0cX">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="https://fantasytyping.in/assets/dist/css/adminlte.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="https://fantasytyping.in/assets/plugins/iCheck/square/blue.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://fantasytyping.in/assets/dist/css/login.css">
+
+  <style type="text/css">
+    .login-logo{
+      width: 100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body class="hold-transition login-page">
+<div class="login-box">
+  <div class="login-logo">
+    <a href="https://fantasytyping.in"><img class="img-fluid logo" src="https://fantasytyping.in/images/logo-icon.png" align="Fantasy Typing"></a>
+  </div>
+  <!-- /.login-logo -->
+      <div class="card">
+        <div class="card-body login-card-body">
+            <p class="login-box-msg">Sign in to start your session</p>
+
+            <form method="POST" action="https://fantasytyping.in/login">
+                <input type="hidden" name="_token" value="xf4AMP1donsMQiAjgINk90GTqLFeZJ7FPUqqK0cX">                <div class="form-group has-feedback">
+                    <input id="email" placeholder="Email" type="email"
+                           class="form-control " name="email"
+                           value="" required autocomplete="email" autofocus>
+                                    </div>
+                <div class="form-group has-feedback">
+                    <input id="password" placeholder="Password" type="password"
+                           class="form-control " name="password" required
+                           autocomplete="current-password">
+                                    </div>
+                <div class="row">
+                    <div class="col-8">
+                        <div class="checkbox icheck">
+                            <label>
+                                <input type="checkbox" name="remember"
+                                       id="remember" > Remember Me
+                            </label>
+                        </div>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-4">
+                        <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                    </div>
+                    <!-- /.col -->
+                </div>
+            </form>
+                            <p class="mb-1">
+                    <a href="https://fantasytyping.in/password/reset">Forgot Your Password?</a>
+                </p>
+                                        <p class="mb-0">
+                    <a href="https://fantasytyping.in/register" class="text-center">Register a new membership</a>
+                </p>
+                    </div>
+        <!-- /.login-card-body -->
+    </div>
+</div>
+<!-- /.login-box -->
+
+<!-- jQuery -->
+<script src="/assets/plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- iCheck -->
+<script src="/assets/plugins/iCheck/icheck.min.js"></script>
+<script>
+  $(function () {
+    $('input').iCheck({
+      checkboxClass: 'icheckbox_square-blue',
+      radioClass   : 'iradio_square-blue',
+      increaseArea : '20%' // optional
+    })
+  })
+</script>
+</body>
+</html>
